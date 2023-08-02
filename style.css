@@ -200,3 +200,60 @@ html, body {
   text-transform: uppercase;
   transition: 1s;
 }
+
+
+
+
+/* responsive
+
+
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  /* Header */
+  #nav {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+  #nav h4 {
+    margin-top: 10px;
+  }
+
+  /* Heading */
+  #heading h1 {
+    font-size: 12vw;
+    margin-left: 0;
+  }
+  #heading #second {
+    margin-left: 0;
+  }
+
+  /* Footer */
+  #footer {
+    align-items: center;
+  }
+}
+
+/* Adjustments for tablets */
+@media (max-width: 1024px) {
+  /* Heading */
+  #heading h1 {
+    font-size: 10vw;
+  }
+}
+
+/* Adjustments for large screens */
+@media (min-width: 1200px) {
+  /* Header */
+  #nav h4 {
+    display: none;
+  }
+
+  /* Heading */
+  #heading h1 {
+    font-size: 7.9vw;
+    padding-bottom: 5px;
+  }
+}
