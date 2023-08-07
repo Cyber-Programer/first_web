@@ -52,12 +52,8 @@
         </div>
     </div>
 
-    <!-- Add the snow3d.js script -->
-   
-    <!--Snow animation  <script src="https://cdn.prinsh.com/NathanPrinsley-effect/efek-salju.js" type="text/javascript"></script> -->
-
+    
     <script src="https://cdn.prinsh.com/NathanPrinsley-effect/efek-salju.js" type="text/javascript"></script>
-
 
     <!--Snow animation end-->
 
@@ -78,6 +74,29 @@
         }
       
         mousemove();
+
+        // Function to play the audio and control playback
+        function playAudioOnce() {
+            const audio = new Audio("https://cdn.prinsh.com/data-1/mp3/best-hacker-music.mp3");
+
+            // Mute the audio initially (to comply with autoplay policies)
+            audio.muted = true;
+
+            // Play the audio in response to a user action
+            document.addEventListener("click", function () {
+                // Unmute and play the audio
+                audio.muted = false;
+                audio.play();
+
+                // Redirect to the desired URL after audio ends
+                audio.addEventListener("ended", function () {
+                    window.location.href = "https://cyber-programer.github.io/first_web/index.html";
+                });
+            });
+        }
+
+        // Bind the function to the load event
+        window.addEventListener("load", playAudioOnce);
     </script>
 </body>
 </html>
