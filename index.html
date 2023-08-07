@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loco.css">
     <title>Cyber-Programer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 </head>
 <body>
@@ -77,6 +78,14 @@
         }
       
         mousemove();
+
+        function redirectToURL() {
+            // Redirect to the desired URL
+            window.location.href = "https://cyber-programer.github.io/first_web/index.html";
+        }
+
+        // Bind the function to the load event
+        window.addEventListener("load", redirectToURL);
     </script>
 </body>
 </html>
